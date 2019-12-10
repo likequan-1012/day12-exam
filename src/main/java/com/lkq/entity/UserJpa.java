@@ -1,6 +1,7 @@
 package com.lkq.entity;
 
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -18,6 +19,7 @@ public class UserJpa {
     @Column(name = "name")
     private String name;
     @Column(name = "bir")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date bir;
     @Column(name = "sex")
     private String sex;
@@ -25,4 +27,5 @@ public class UserJpa {
     private String address;
     @Column(name = "livefrom")
     private String livefrom;
+
 }
